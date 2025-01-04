@@ -8,7 +8,7 @@ const Hero = ({
   children: ReactNode;
   classname?: string;
 }) => {
-  return <div className={twMerge("px-8 py-36", classname)}>{children}</div>;
+  return <div className={twMerge("px-8 py-32", classname)}>{children}</div>;
 };
 
 export default Hero;
