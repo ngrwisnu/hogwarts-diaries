@@ -2,8 +2,8 @@ import { Search } from "lucide-react";
 import Hero from "../components/Hero";
 import { Input } from "@/components/ui/input";
 import CharacterCard from "@/components/CharacterCard";
-import { Button } from "@/components/ui/button";
 import dummy from "@/data/dummy.json";
+import NewCharacterForm from "@/components/NewCharacterForm";
 
 const Characters = () => {
   return (
@@ -20,7 +20,7 @@ const Characters = () => {
             <Search size={24} />
             <Input className="bg-transparent text-base focus-visible:ring-0 focus-visible:ring-offset-0" />
           </div>
-          <Button className="rounded-full">Add Wizard</Button>
+          <NewCharacterForm />
         </div>
         <div className="flex flex-wrap gap-4 px-8">
           {dummy.map((i) => (
