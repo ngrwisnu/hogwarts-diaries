@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="flex min-w-full justify-between bg-castleton-900 px-8 py-8 text-lavender-100">
+    <div className="flex h-auto min-w-full justify-between bg-castleton-900 px-8 py-8 text-lavender-100">
       <h6 className="text-2xl">
         Hogwarts <br /> Diaries
       </h6>

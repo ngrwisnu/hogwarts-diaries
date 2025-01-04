@@ -4,13 +4,13 @@ import Footer from "@/components/Footer";
 
 const RootLayout = () => {
   return (
-    <>
+    <div className="grid grid-rows-[auto_minmax(100vh,_1fr)_auto]">
       <Header />
-      <main className="min-h-screen">
+      <main className="w-full">
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

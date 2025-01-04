@@ -11,6 +11,7 @@ export default {
         },
         castleton: {
           900: "#005a35",
+          950: "#001F10",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

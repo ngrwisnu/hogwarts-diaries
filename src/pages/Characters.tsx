@@ -1,17 +1,22 @@
 import { Search } from "lucide-react";
 import Hero from "../components/Hero";
 import { Input } from "@/components/ui/input";
-import CharacterCard from "@/components/CharacterCard";
+import CharacterCard from "@/components/characters/CharacterCard";
 import dummy from "@/data/dummy.json";
-import NewCharacterForm from "@/components/NewCharacterForm";
+import NewCharacterForm from "@/components/characters/NewCharacterForm";
+import Container from "@/components/Container";
 
 const Characters = () => {
   return (
-    <>
-      <Hero classname="bg-lavender-300">
-        <h1 className="px-8 text-center text-6xl uppercase">All Characters</h1>
+    <div className="min-h-screen bg-lavender-300">
+      <Hero>
+        <Container classname="md:flex md:justify-center md:items-center">
+          <h1 className="text-center text-2xl uppercase sm:text-4xl md:max-w-[60%] lg:text-6xl">
+            All Characters
+          </h1>
+        </Container>
       </Hero>
-      <section className="bg-lavender-300 pb-14">
+      <section className="pb-14">
         <div
           id="action-wrapper"
           className="flex w-full items-center justify-center gap-4 py-4"
@@ -28,7 +33,7 @@ const Characters = () => {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

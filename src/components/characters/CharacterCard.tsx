@@ -1,5 +1,5 @@
 import { Trash } from "lucide-react";
-import { Card, CardDescription, CardFooter } from "./ui/card";
+import { Card, CardDescription, CardFooter } from "../ui/card";
 import { Link } from "react-router";
 import { Character } from "@/models/character";
 
