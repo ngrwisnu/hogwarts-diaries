@@ -8,7 +8,7 @@ const About = () => {
           Cast Your Magic on this Website
         </h1>
       </Hero>
-      <div className="min-h-full bg-lavender-100 px-8">
+      <div className="flex flex-col gap-4 bg-lavender-100 px-8">
         <p>
           Welcome to Hogwarts Diaries, a place where magic meets technology!
           This website was created for the enchanting world of Harry Potter and
