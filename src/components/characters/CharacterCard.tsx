@@ -1,4 +1,4 @@
-import { Trash } from "lucide-react";
+import { Image, Trash } from "lucide-react";
 import { Card, CardDescription, CardFooter } from "../ui/card";
 import { Link } from "react-router";
 import { Character } from "@/models/character";
@@ -42,11 +42,18 @@ const CharacterCard = (props: Character) => {
       </CardDescription>
       <CardFooter className="relative flex items-center justify-end p-4">
         <div className="h-14 w-14 overflow-hidden rounded-full">
-          <img
-            src={`/images/${house.toLowerCase() || "gryffindor"}.png`}
-            alt=""
-            className="object-cover"
-          />
+          {house && (
+            <img
+              src={`/images/${house.toLowerCase()}.png`}
+              alt=""
+              className="object-cover"
+            />
+          )}
+          {!house && (
+            <div className="flex h-full w-full items-center justify-center bg-slate-100">
+              <Image />
+            </div>
+          )}
         </div>
       </CardFooter>
     </Card>
