@@ -32,7 +32,7 @@ const Characters = () => {
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && searchRef.current) {
-      searchRef.current.blur();
+      (searchRef.current as HTMLElement).blur();
     }
   };
 

@@ -1,4 +1,6 @@
-export async function detailLoader({ request, params }) {
+import { LoaderFunctionArgs } from "react-router";
+
+export async function detailLoader({ params }: LoaderFunctionArgs) {
   const id = params.id;
 
   try {
