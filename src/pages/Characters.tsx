@@ -28,7 +28,7 @@ const Characters = () => {
         )
       : null;
     setFilteredCharacters(filtered);
-  }, [search]);
+  }, [search, data.characters]);
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" && searchRef.current) {

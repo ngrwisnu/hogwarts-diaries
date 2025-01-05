@@ -36,14 +36,20 @@ const About = () => {
             </h2>
             <AboutDescription>
               <p className="max-w-[60%]">
-                ✨Add Characters: Think a magical creature or an overlooked
-                character deserves a spot? Add them to our database!
+                ✨Add Characters(soon): Think a magical creature or an
+                overlooked character deserves a spot? Add them to our database!
               </p>
             </AboutDescription>
             <AboutDescription>
               <p className="max-w-[60%]">
-                ✨Delete Entries: Manage the roster by removing duplicates or
-                outdated entries.
+                ✨Edit Profiles(soon): Update details, correct mistakes, or
+                enrich the profiles with new insights.
+              </p>
+            </AboutDescription>
+            <AboutDescription>
+              <p className="max-w-[60%]">
+                ✨Delete Entries(soon): Manage the roster by removing duplicates
+                or outdated entries.
               </p>
             </AboutDescription>
           </div>

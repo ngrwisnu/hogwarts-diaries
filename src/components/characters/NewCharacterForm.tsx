@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Dialog,
   DialogContent,
@@ -18,6 +20,7 @@ import {
   SelectValue,
 } from "../ui/select";
 import { useState } from "react";
+import { RequestCharacter } from "@/models/character";
 
 const NewCharacterForm = () => {
   const [open, setOpen] = useState(false);
@@ -28,15 +31,37 @@ const NewCharacterForm = () => {
   const [house, setHouse] = useState("");
 
   const handleSubmit = () => {
-    const data = {
+    const id = new Date().getTime().toString();
+
+    const data: RequestCharacter = {
+      id,
       name,
-      alternateNames,
+      alternate_names: alternateNames,
       gender,
       species,
       house,
+      dateOfBirth: "",
+      yearOfBirth: 0,
+      wizard: false,
+      ancestry: "",
+      eyeColour: "",
+      hairColour: "",
+      wand: {
+        wood: "",
+        core: "",
+        length: 0,
+      },
+      patronus: "",
+      hogwartsStudent: false,
+      hogwartsStaff: false,
+      actor: "",
+      alternate_actors: [],
+      alive: true,
+      image: "",
     };
 
     console.log(data);
+
     setOpen(false);
   };
 

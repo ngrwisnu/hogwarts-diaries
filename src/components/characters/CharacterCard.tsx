@@ -13,9 +13,9 @@ const CharacterCard = (props: Character) => {
         className="absolute inset-0 z-[9]"
       />
       <div className="relative h-1/2 rounded-t-lg">
-        <div className="absolute left-6 top-0 flex h-full w-1/3 -rotate-12 items-center justify-center bg-slate-200">
+        <div className="absolute left-6 top-0 flex h-full w-1/3 -rotate-12 items-center justify-center overflow-hidden bg-slate-200">
           {!image && <div>No Image</div>}
-          {image && <img src={image} alt={name} className="object-cover" />}
+          {image && <img src={image} alt={name} className="object-contain" />}
         </div>
         <svg
           className="absolute -top-[6px] left-[64px]"
