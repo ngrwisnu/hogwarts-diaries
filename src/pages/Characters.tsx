@@ -52,7 +52,7 @@ const Characters = () => {
       <section className="pb-14">
         <div
           id="action-wrapper"
-          className="flex w-full items-center justify-center gap-4 py-4"
+          className="mb-8 flex w-full items-center justify-center gap-4 py-4"
         >
           <div className="flex h-full min-w-[320px] max-w-[60%] items-center gap-0 overflow-hidden rounded-full bg-slate-200 px-4 py-2">
             <Search size={24} />

@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import Hero from "@/components/Hero";
 import { formattedResponse } from "@/lib/characters";
+import { Image } from "lucide-react";
 import { useLoaderData } from "react-router";
 
 const Details = () => {
@@ -18,7 +19,12 @@ const Details = () => {
             <img src={`/images/${house.toLowerCase()}.png`} alt="" />
           </div>
           <div className="relative h-[340px] min-w-[240px] max-w-[320px] overflow-hidden">
-            <img src={image} alt="" className="object-cover" />
+            {image && <img src={image} alt="" className="object-cover" />}
+            {!image && (
+              <div className="flex h-full w-full items-center justify-center bg-slate-100 text-slate-400">
+                <Image size={48} />
+              </div>
+            )}
           </div>
         </div>
       </Hero>
@@ -27,7 +33,7 @@ const Details = () => {
           <div className="flex flex-col">
             <div className="text-base text-slate-600">Date of Birth</div>
             <h6 className="text-3xl font-medium text-castleton-950">
-              {dateOfBirth}
+              {dateOfBirth || "-"}
             </h6>
           </div>
           <div className="flex flex-col">
@@ -38,15 +44,18 @@ const Details = () => {
           </div>
           <div className="flex flex-col">
             <div className="text-base text-slate-600">House</div>
-            <h6 className="text-3xl font-medium text-castleton-950">{house}</h6>
+            <h6 className="text-3xl font-medium text-castleton-950">
+              {house || "-"}
+            </h6>
           </div>
           <div className="flex flex-col">
             <div className="text-base text-slate-600">Aliases</div>
             <ul className="text-3xl font-medium text-castleton-950">
-              {alternate_names &&
-                alternate_names.map((name: string) => (
-                  <li key={name}>{name}</li>
-                ))}
+              {alternate_names.length
+                ? alternate_names.map((name: string) => (
+                    <li key={name}>{name}</li>
+                  ))
+                : "-"}
             </ul>
           </div>
         </Container>

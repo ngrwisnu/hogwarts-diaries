@@ -1,6 +1,6 @@
-import { Character } from "@/models/character";
+import { Character, Response } from "@/models/character";
 
-export const formattedResponse: (data: any) => Character = (data) => ({
+export const formattedResponse: (data: Response) => Character = (data) => ({
   id: data.id,
   name: data.name,
   alternate_names: data.alternate_names,
