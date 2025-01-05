@@ -5,7 +5,12 @@ export async function detailLoader({ params }: LoaderFunctionArgs) {
 
   try {
     const response = await fetch(
-      `${import.meta.env.VITE_SOME_KEY || "http://localhost:3000"}/api/${id}`,
+      `${import.meta.env.VITE_API_URL || "http://localhost:3000"}/api/${id}`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      },
     );
 
     const data = await response.json();
