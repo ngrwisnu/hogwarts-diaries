@@ -5,7 +5,7 @@ export async function detailLoader({ params }: LoaderFunctionArgs) {
 
   try {
     const response = await fetch(
-      `${import.meta.env.VITE_API_URL || "http://localhost:3000"}/api/${id}`,
+      `https://hp-api.herokuapp.com/api/characters/${id}`,
       {
         headers: {
           "Content-Type": "application/json",
